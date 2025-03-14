@@ -121,7 +121,7 @@
             <?php if ($errors['dob']) {print '<div class="error-message">Некорректный формат даты рождения.</div>';} ?>
 
             <!-- Поле Пол -->
-            <label>Пол:</label> 
+            <label>Пол:</label>
             <div class="radio-group">
                 <input type="radio" name="gender" value="male" id="male" <?php if ($values['gender'] == 'male') {print 'checked';} ?>>
                 <label for="male">Мужской</label>
