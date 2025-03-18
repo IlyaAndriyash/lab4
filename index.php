@@ -77,56 +77,56 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         setcookie('fio_error', '1', time() + 24 * 60 * 60);
         $errors = TRUE;
     }
-    setcookie('fio_value', $_POST['fio'], time() + 30 * 24 * 60 * 60);
+    setcookie('fio_value', $_POST['fio'], time() + 365 * 24 * 60 * 60);
 
     // Валидация телефона
     if (empty($_POST['phone']) || !preg_match('/^\+?\d{10,15}$/', $_POST['phone'])) {
         setcookie('phone_error', '1', time() + 24 * 60 * 60);
         $errors = TRUE;
     }
-    setcookie('phone_value', $_POST['phone'], time() + 30 * 24 * 60 * 60);
+    setcookie('phone_value', $_POST['phone'], time() + 365 * 24 * 60 * 60);
 
     // Валидация email
     if (empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         setcookie('email_error', '1', time() + 24 * 60 * 60);
         $errors = TRUE;
     }
-    setcookie('email_value', $_POST['email'], time() + 30 * 24 * 60 * 60);
+    setcookie('email_value', $_POST['email'], time() + 365 * 24 * 60 * 60);
 
     // Валидация даты рождения
     if (empty($_POST['dob']) || !preg_match('/^\d{4}-\d{2}-\d{2}$/', $_POST['dob'])) {
         setcookie('dob_error', '1', time() + 24 * 60 * 60);
         $errors = TRUE;
     }
-    setcookie('dob_value', $_POST['dob'], time() + 30 * 24 * 60 * 60);
+    setcookie('dob_value', $_POST['dob'], time() + 365 * 24 * 60 * 60);
 
     // Валидация пола
     if (empty($_POST['gender']) || !in_array($_POST['gender'], ['male', 'female'])) {
         setcookie('gender_error', '1', time() + 24 * 60 * 60);
         $errors = TRUE;
     }
-    setcookie('gender_value', $_POST['gender'], time() + 30 * 24 * 60 * 60);
+    setcookie('gender_value', $_POST['gender'], time() + 365 * 24 * 60 * 60);
 
     // Валидация языков программирования
     if (empty($_POST['languages'])) {
         setcookie('languages_error', '1', time() + 24 * 60 * 60);
         $errors = TRUE;
     }
-    setcookie('languages_value', json_encode($_POST['languages']), time() + 30 * 24 * 60 * 60);
+    setcookie('languages_value', json_encode($_POST['languages']), time() + 365 * 24 * 60 * 60);
 
     // Валидация биографии
     if (empty($_POST['bio'])) {
         setcookie('bio_error', '1', time() + 24 * 60 * 60);
         $errors = TRUE;
     }
-    setcookie('bio_value', $_POST['bio'], time() + 30 * 24 * 60 * 60);
+    setcookie('bio_value', $_POST['bio'], time() + 365 * 24 * 60 * 60);
 
     // Валидация чекбокса
     if (empty($_POST['contract'])) {
         setcookie('contract_error', '1', time() + 24 * 60 * 60);
         $errors = TRUE;
     }
-    setcookie('contract_value', $_POST['contract'], time() + 30 * 24 * 60 * 60);
+    setcookie('contract_value', $_POST['contract'], time() + 365 * 24 * 60 * 60);
 
     if ($errors) {
         // При наличии ошибок перезагружаем страницу
